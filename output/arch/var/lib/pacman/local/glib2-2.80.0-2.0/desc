@@ -1,0 +1,62 @@
+%NAME%
+glib2
+
+%VERSION%
+2.80.0-2.0
+
+%BASE%
+glib2
+
+%DESC%
+Low level core library
+
+%URL%
+https://gitlab.gnome.org/GNOME/glib
+
+%ARCH%
+pentium4
+
+%BUILDDATE%
+1712590276
+
+%INSTALLDATE%
+1748456424
+
+%PACKAGER%
+TasosSah <arch32@tasossah.com>
+
+%SIZE%
+37648218
+
+%REASON%
+1
+
+%LICENSE%
+LGPL-2.1-or-later
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+libffi
+libsysprof-capture
+pcre2
+util-linux-libs
+zlib
+libffi.so=8-32
+libmount.so=1-32
+
+%OPTDEPENDS%
+gvfs: most gio functionality
+libelf: gresource inspection tool
+python: gdbus-codegen, glib-genmarshal, glib-mkenums, gtester-report
+python-packaging: gdbus-codegen
+
+%PROVIDES%
+libglib-2.0.so=0-32
+libgio-2.0.so=0-32
+libgirepository-2.0.so=0-32
+libgmodule-2.0.so=0-32
+libgobject-2.0.so=0-32
+libgthread-2.0.so=0-32
+

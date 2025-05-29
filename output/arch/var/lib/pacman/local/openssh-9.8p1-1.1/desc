@@ -1,0 +1,62 @@
+%NAME%
+openssh
+
+%VERSION%
+9.8p1-1.1
+
+%BASE%
+openssh
+
+%DESC%
+SSH protocol implementation for remote login, command execution and file transfer
+
+%URL%
+https://www.openssh.com/portable.html
+
+%ARCH%
+pentium4
+
+%BUILDDATE%
+1720252638
+
+%INSTALLDATE%
+1748456427
+
+%PACKAGER%
+Andreas Baumann <mail@andreasbaumann.cc>
+
+%SIZE%
+5763634
+
+%LICENSE%
+BSD-2-Clause
+BSD-3-Clause
+ISC
+LicenseRef-Public-Domain
+MIT
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+krb5
+libkrb5.so=3-32
+libgssapi_krb5.so=2-32
+libedit
+libedit.so=0-32
+libxcrypt
+libcrypt.so=2-32
+openssl
+libcrypto.so=3-32
+pam
+libpam.so=0-32
+zlib
+libz.so=1-32
+
+%OPTDEPENDS%
+libfido2: FIDO/U2F support
+sh: for ssh-copy-id and findssl.sh
+x11-ssh-askpass: input passphrase in X
+xorg-xauth: X11 forwarding
+

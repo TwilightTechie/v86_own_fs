@@ -1,0 +1,54 @@
+%NAME%
+iproute2
+
+%VERSION%
+6.9.0-1.0
+
+%BASE%
+iproute2
+
+%DESC%
+IP Routing Utilities
+
+%URL%
+https://git.kernel.org/pub/scm/network/iproute2/iproute2.git
+
+%ARCH%
+pentium4
+
+%BUILDDATE%
+1715788762
+
+%INSTALLDATE%
+1748456425
+
+%PACKAGER%
+TasosSah <arch32@tasossah.com>
+
+%SIZE%
+2987693
+
+%REASON%
+1
+
+%LICENSE%
+GPL2
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+iptables
+libcap
+libelf
+libbpf
+
+%OPTDEPENDS%
+db5.3: userspace arp daemon
+linux-atm: ATM support
+python: for routel
+
+%PROVIDES%
+iproute
+

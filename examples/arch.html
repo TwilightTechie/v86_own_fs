@@ -19,10 +19,13 @@ window.onload = function()
             url: "../bios/vgabios.bin",
         },
         filesystem: {
-            baseurl: "../images/arch/",
-            basefs: "../images/fs.json",
+            baseurl: "../output/images/arch/",
+            basefs: "../output/images/fs.json",
         },
         autostart: true,
+        initial_state: {
+                url: "http://localhost:8000/images/v86state.bin.zst",
+        },
         bzimage_initrd_from_filesystem: true,
         cmdline: [
             "rw",
@@ -64,11 +67,29 @@ window.onload = function()
 
         this.blur();
     };
+
+    // Add file upload logic for sending files to emulator
+    document.getElementById("filesystem_send_file").onchange = function()
+    {
+        Array.prototype.forEach.call(this.files, function(file)
+        {
+            var filereader = new FileReader();
+            filereader.onload = async function(e)
+            {
+                await emulator.create_file("/" + file.name, new Uint8Array(e.target.result));
+            };
+            filereader.readAsArrayBuffer(file);
+        }, this);
+        this.value = "";
+        this.blur();
+    };
 };
 </script>
 
 <input id="save_file" type="button" value="Save state to file">
 Restore from file: <input id="restore_file" type="file">
+<br>
+Send files to emulator:<input type="file" id="filesystem_send_file" multiple>
 <hr>
 
 <!-- A minimal structure for the ScreenAdapter defined in browser/screen.js -->

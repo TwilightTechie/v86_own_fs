@@ -1,0 +1,41 @@
+{
+  "provisioners": [
+    {
+      "type": "shell",
+      "override": {
+        "qemu": {
+          "scripts": ["scripts/provision.sh"]
+        }
+      }
+    }
+  ],
+  "builders": [
+    {
+      "accelerator": "kvm",
+      "type": "qemu",
+      "boot_command": [
+        "<enter><wait30><enteropenssl passwd help<wait10>",
+        "dhcpcd<enter><wait5>",
+        "echo root:root | chpasswd<enter><wait5>",
+        "systemctl start sshd<enter>"
+      ],
+      "headless": true,
+      "boot_wait": "10s",
+      "disk_size": 1500,
+      "disk_interface": "ide",
+      "iso_url": "https://mirror.archlinux32.org/archisos/archlinux32-2021.12.01-i686.iso",
+      "iso_checksum": "90c6f5aecb095d5578f6c9970539da7c5e9324ec",
+      "iso_checksum_type": "sha1",
+      "ssh_wait_timeout": "120s",
+      "ssh_pty": true,
+      "ssh_username": "root",
+      "ssh_password": "root",
+      "ssh_port": 22,
+      "format": "raw",
+      "vm_name": "archlinux",
+      "disk_detect_zeroes": "unmap",
+      "memory": 2048,
+      "vnc_bind_address": "0.0.0.0"
+    }
+  ]
+}

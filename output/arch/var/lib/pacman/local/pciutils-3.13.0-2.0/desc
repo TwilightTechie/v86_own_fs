@@ -1,0 +1,49 @@
+%NAME%
+pciutils
+
+%VERSION%
+3.13.0-2.0
+
+%BASE%
+pciutils
+
+%DESC%
+PCI bus configuration space access library and tools
+
+%URL%
+https://mj.ucw.cz/sw/pciutils/
+
+%ARCH%
+pentium4
+
+%BUILDDATE%
+1724947513
+
+%INSTALLDATE%
+1748456423
+
+%PACKAGER%
+Andreas Baumann <mail@andreasbaumann.cc>
+
+%SIZE%
+370539
+
+%REASON%
+1
+
+%LICENSE%
+GPL-2.0-only
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+hwdata
+kmod
+
+%OPTDEPENDS%
+which: for update-pciids
+grep: for update-pciids
+curl: for update-pciids
+
