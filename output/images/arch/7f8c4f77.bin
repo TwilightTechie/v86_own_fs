@@ -1,0 +1,55 @@
+%NAME%
+linux
+
+%VERSION%
+6.12.4.arch1-1.0
+
+%BASE%
+linux
+
+%DESC%
+The Linux kernel and modules
+
+%URL%
+https://github.com/archlinux/linux
+
+%ARCH%
+pentium4
+
+%BUILDDATE%
+1733860200
+
+%INSTALLDATE%
+1748456427
+
+%PACKAGER%
+Andreas Baumann <mail@andreasbaumann.cc>
+
+%SIZE%
+232649299
+
+%LICENSE%
+GPL-2.0-only
+
+%VALIDATION%
+sha256
+
+%REPLACES%
+virtualbox-guest-modules-arch
+wireguard-arch
+
+%DEPENDS%
+coreutils
+initramfs
+kmod
+
+%OPTDEPENDS%
+linux-firmware: firmware images needed for some devices
+scx-scheds: to use sched-ext schedulers
+wireless-regdb: to set the correct wireless channels of your country
+
+%PROVIDES%
+KSMBD-MODULE
+VIRTUALBOX-GUEST-MODULES
+WIREGUARD-MODULE
+

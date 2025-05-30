@@ -1,0 +1,46 @@
+%NAME%
+libgpg-error
+
+%VERSION%
+1.55-1.0
+
+%BASE%
+libgpg-error
+
+%DESC%
+Support library for libgcrypt
+
+%URL%
+https://www.gnupg.org
+
+%ARCH%
+pentium4
+
+%BUILDDATE%
+1745817740
+
+%INSTALLDATE%
+1748456422
+
+%PACKAGER%
+Andreas Baumann <mail@andreasbaumann.cc>
+
+%SIZE%
+1147752
+
+%REASON%
+1
+
+%LICENSE%
+LGPL-2.1-or-later
+BSD-3-Clause OR LGPL-2.1-or-later
+FSFULLR
+GPL-2.0-or-later
+
+%VALIDATION%
+sha256
+
+%DEPENDS%
+glibc
+sh
+

@@ -1,0 +1,43 @@
+%NAME%
+tzdata
+
+%VERSION%
+2025b-1.0
+
+%BASE%
+tzdata
+
+%DESC%
+Sources for time zone and daylight saving time data
+
+%URL%
+https://www.iana.org/time-zones
+
+%ARCH%
+pentium4
+
+%BUILDDATE%
+1742827440
+
+%INSTALLDATE%
+1748456420
+
+%PACKAGER%
+Andreas Baumann <mail@andreasbaumann.cc>
+
+%SIZE%
+2055527
+
+%REASON%
+1
+
+%LICENSE%
+LicenseRef-tz
+
+%VALIDATION%
+sha256
+
+%OPTDEPENDS%
+bash: for tzselect
+glibc: for zdump, zic
+
